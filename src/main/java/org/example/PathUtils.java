@@ -1,9 +1,10 @@
 package org.example;
 
+import java.nio.file.Paths;
+
 public class PathUtils {
     public String getConfigPath() {
-        // Cố tình dùng dấu \ của Windows để gây lỗi trên Ubuntu/macOS
-        return "config" + "\\" + "settings.txt";
+        // Sử dụng Paths.get để tự động chọn dấu / hoặc \ tùy theo OS
+        return Paths.get("config", "settings.txt").toString();
     }
 }
-
