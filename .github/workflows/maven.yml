@@ -28,7 +28,7 @@ jobs:
 
       # 3. Triển khai upload-artifact để lưu giữ file .jar
       - name: Upload JAR Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         # Chạy action này bất kể bước trên thành công hay thất bại (để phục vụ việc test lỗi)
         if: always()
         with:
